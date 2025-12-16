@@ -1,0 +1,87 @@
+{
+  "1": {
+    "inputs": {
+      "model": "RMBG-2.0",
+      "sensitivity": 1,
+      "process_res": 1024,
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "invert_output": false,
+      "refine_foreground": false,
+      "background": "Alpha",
+      "background_color": "#222222",
+      "image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "RMBG",
+    "_meta": {
+      "title": "去除背景 (RMBG)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "filename_prefix": "RMBG",
+      "foldername_prefix": "",
+      "output_format": ".png",
+      "quality": 100,
+      "save_image_metadata": true,
+      "image_preview": true,
+      "images": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "SaveImageSimple",
+    "_meta": {
+      "title": "comfyui-save-image-pro (Simple)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "filename_prefix": "RMBG",
+      "foldername_prefix": "",
+      "output_format": ".png",
+      "quality": 100,
+      "save_image_metadata": true,
+      "image_preview": true,
+      "images": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "SaveImageSimple",
+    "_meta": {
+      "title": "comfyui-save-image-pro (Simple)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "model": "BiRefNet-general",
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "invert_output": false,
+      "refine_foreground": false,
+      "background": "Alpha",
+      "background_color": "#222222",
+      "image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "BiRefNetRMBG",
+    "_meta": {
+      "title": "BiRefNet 去除背景 (RMBG)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "image": ""
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  }
+}

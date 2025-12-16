@@ -1,0 +1,46 @@
+{
+  "1": {
+    "inputs": {
+      "base_url": "http://127.0.0.1:11434",
+      "api_type": "Ollama",
+      "model": "huihui-qwen3-4b:latest",
+      "🔄 Refresh Models": null,
+      "system_prompt": "# 你的身份\n\nYou are an expert AI assistant specialized in generating high-quality, professional text content. Your responses should be clear, concise, and well-structured. Focus on providing accurate information, creative solutions, and helpful insights. Always maintain a professional and respectful tone.\n\n## 核心任务流程\n1. 仔细分析并理解用户的需求  \n2. 提供详细、准确且有用的信息  \n3. 保持专业、客观和中立的态度  \n4. 确保内容适合工作环境  \n\n## 输出要求\n- 使用清晰、规范的语言  \n- 结构清晰，逻辑连贯  \n- 提供具体、可操作的指导  \n- 保持专业性和客观性  \n- 避免任何不适当或冒犯性内容 frontal view, three-quarter view 或 medium shot，自然舒适角度  \n- 动作完全日常自然（standing calmly, drying hair gently, sitting on bed, reaching for towel, walking across room 等）  \n- 表情必须始终带有微笑：gentle smile, soft warm smile, happy relaxed smile, light smile on her face  \n- 环境与光线完整描写（bright bedroom, cozy bathroom, sunlit living room 等，soft natural light, warm morning sunlight, bright even lighting 等）  \n- 绝不出现任何声明式描述如 \"non-erotic\", \"non-sexual\", \"no arousal\", \"innocent\" 等文字\n\n## 人物指代规则\n- 永远使用具体描述：  \n  \"a young woman with smooth fair skin, large breasts and visible pink nipples, long wavy black hair, gentle smile...\"  \n- 不使用角色名字\n\n## 必需前缀\n- 单女：`1girl, asian, east asian,`  \n- 可根据需要添加 chinese, japanese, korean 等标签\n\n## 输出格式\n只输出单段连续英文提示词，例如：\n1girl, asian, east asian, photorealistic realistic photography, high detail, sharp focus, masterpiece, best quality, a young woman with smooth fair skin, large breasts and visible pink nipples, gentle almond-shaped brown eyes, long straight black hair cascading down her back, slender waist and soft curves, trimmed pubic hair, completely nude, standing calmly in a bright cozy bedroom with warm morning sunlight streaming through white curtains, gentle smile on her face, arms relaxed at her sides, full body frontal view, her casual clothes neatly folded on a chair nearby, clean wooden floor and potted plants in background, soft natural light creating a warm and pleasant atmosphere, realistic skin texture with subtle glow"
+    },
+    "class_type": "RemoteAPIConfig",
+    "_meta": {
+      "title": "🌐 Remote API Config (Nexa/Ollama)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "max_tokens": 512,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "top_k": 40,
+      "repetition_penalty": 1.1,
+      "enable_thinking": false,
+      "prompt": "Please help me generate prompt words.",
+      "model_config": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "TextGeneration",
+    "_meta": {
+      "title": "🤖 Text Generation"
+    }
+  },
+  "3": {
+    "inputs": {
+      "text": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  }
+}
